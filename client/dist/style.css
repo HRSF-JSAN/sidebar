@@ -1,0 +1,220 @@
+.kev_feeBar .hidden {
+  display: none;
+}
+.kev_container {
+  vertical-align: center;
+  position: relative;
+  text-align: center;
+
+}
+.kev_delivery .kev_container {
+  vertical-align: center;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  border: 0.5px solid grey;
+  border-radius: 15px;
+}
+.kev_container .kev_title{
+  padding-left: 10px;
+  margin-right: 30px;
+}
+.kev_delivery {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.kev_delivery h1 {
+  font-size: 10px;
+}
+.kev_priceRange {
+  color: green;
+}
+.kev_li .kev_blockList{
+  display: block;
+  border-radius: 15px;
+  padding: 5px;
+  border: 0.5px solid grey;
+}
+.kev_containerDescription h1 {
+  font-size: 30px;
+}
+.kev_hoursTitle {
+  font-size: 30px;
+}
+input[type="radio"]{
+  margin: 0 10px 0 10px;
+}
+.kev_title h1 {
+  font-size: 25px;
+}
+.kev_feeBar {
+  display: inline-block;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.kev_list .kev_hidden {
+  display: none;
+}
+.kev_infoInput {/* Chrome/Opera/Safari */
+    white-space:pre-line;  
+    position:relative;
+    top:-7px;
+}
+b {
+  padding: 10px;
+}
+.kev_list {
+  display: inline-block;
+  border-radius: 15px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+td{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+table{
+  border-top: none;
+  padding: 50px;
+}
+
+td {
+  border-top: none;
+  padding-right: 10px;
+}
+.kev_input .hidden {
+  display: none;
+}
+h1 {
+  font-size: 30px;
+}
+
+.kev_input {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 5px;
+  width: 90%;
+}
+.kev_price {
+  padding-left: -20px;
+}
+
+.kev_infoInput .hidden {
+  display: none;
+}
+.kev_optionSelect input.radios {
+  padding-left: 50px;
+
+}
+.kev_optionSelect {
+  padding: 20px;
+}
+.kev_infoInput {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+}
+
+infoinput,
+input::-webkit-input-placeholder {
+  font-size: 20px;
+  line-height: 3;
+}
+.kev_hoursTable {
+  vertical-align: center;
+  margin: auto;
+}
+.kev_space {
+  color: green;
+}
+
+.kev_h5 .hidden {
+  display: none;
+}
+
+.kev_h5 {
+  display: block;
+  padding-bottom: 10px;
+}
+.kev_todayBox {
+  padding-top: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  display: inline-block;
+  width: 100%;
+}
+.kev_todayList {
+  display: block;
+  border: 0.5px solid grey;
+  border-radius: 15px;
+
+}
+.kev_containerDescription {
+  padding-top: 10px;
+  display: inline-block;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+.kev_containerDescription div {
+  display: inline-block;
+}
+.kev_h1Description {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+.kev_h1Description h1{
+  font-size: 30px;
+}
+.kev_theTable {
+  align-items: center;
+  display: inline-block;
+  padding: -10px;
+  display: flex;
+  justify-content: center;
+}
+ul{ 
+  list-style-type: none;
+} 
+
+.kev_btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  vertical-align: center;
+  font-family: Arial;
+  color: #ffffff;
+  padding-bottom: 20px;
+  font-size: 20px;
+  padding: 10px 100px 12px 100px;
+  text-decoration: none;
+}
+
+.kev_btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
