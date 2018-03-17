@@ -13,6 +13,6 @@ app.use('/', router);
 app.use(express.static(path.join(__dirname, '/../client/dist')));
 
 
-app.listen(port);
+app.listen(port, () => console.log(`listening on ${port}`)); // eslint-disable-line no-console
 
 module.exports = app;
