@@ -15,3 +15,7 @@ client/bundle.js
 
 # jest coverage #
 coverage
+
+# bundles #
+client/dist/bundle.js
+client/dist/bundle.js.map
