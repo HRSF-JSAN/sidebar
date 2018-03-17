@@ -6,8 +6,10 @@
   "scripts": {
     "test": "jest",
     "start": "node server/server.js",
-    "dev-react": "webpack",
-    "build-data": "node generatorFunctions/seed.js"
+    "dev-react": "webpack -d --watch",
+    "build-data": "time node generatorFunctions/jsonScript.js",
+    "seedDB": "mongoimport --db localhost --collection information --file seedData.js"
+
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +18,7 @@
     "babel-core": "^6.17.0",
     "babel-jest": "^22.4.1",
     "babel-loader": "^6.2.5",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.16.0",
     "body-parser": "^1.15.2",
     "bootstrap": "^4.0.0",
@@ -24,6 +27,7 @@
     "dotenv": "^5.0.1",
     "eslint-plugin-jest": "^21.12.2",
     "express": "^4.14.0",
+    "faker": "^4.1.0",
     "file-loader": "^1.1.10",
     "geocoder": "^0.2.3",
     "google-geolocation": "^1.0.2",
@@ -38,19 +42,18 @@
     "reactstrap": "^5.0.0-beta.2",
     "request": "^2.75.0",
     "style-loader": "^0.20.2",
-    "babel-preset-env": "^1.6.1",
     "webpack": "^1.13.2"
   },
   "devDependencies": {
+    "enzyme": "^3.3.0",
+    "eslint": "^4.18.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "enzyme": "^3.3.0",
     "jest": "^22.4.2",
     "superagent": "^3.8.2",
-    "underscore": "^1.8.3",
     "supertest": "^3.0.0",
-    "eslint": "^4.18.1"
+    "underscore": "^1.8.3"
   }
 }

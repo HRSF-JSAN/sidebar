@@ -1,17 +1,16 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const url = process.env.MONGO;
-mongoose.connect(url);
+mongoose.connect('mongodb://localhost/localhost');
 
 const informationSchema = mongoose.Schema({
   id: {
     type: Number,
-    unqiue: true,
+    unique: true,
   },
   title: {
     type: String,
-    unqiue: true,
+    unique: true,
   },
   location: Object,
   minimumDelivery: Number,
