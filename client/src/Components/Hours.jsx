@@ -15,7 +15,7 @@ class Hours extends React.Component {
       sunday: 'Loading hours',
       restOfTheWeek: 'Loading hours',
       saturday: 'Loading hours',
-      hours: {
+      possibleHours: {
         sunday: [11, 2],
         restOfDays: [9, 10],
         saturday: [9, 11],
@@ -45,7 +45,7 @@ class Hours extends React.Component {
   }
   setHours(data) {
     this.setState({
-      hours: data.hours,
+      possibleHours: data.possibleHours,
       priceRange: data.price,
     }, () => {
       this.setDay();
@@ -91,12 +91,12 @@ class Hours extends React.Component {
   displayTime() {
     const open = 0;
     const close = 1;
-    const sunOpen = this.state.hours.sunday[open];
-    const sunClosed = this.state.hours.sunday[close];
-    const restOpen = this.state.hours.restOfDays[open];
-    const restClosed = this.state.hours.restOfDays[close];
-    const satOpen = this.state.hours.saturday[open];
-    const satClosed = this.state.hours.saturday[close];
+    const sunOpen = this.state.possibleHours.sunday[open];
+    const sunClosed = this.state.possibleHours.sunday[close];
+    const restOpen = this.state.possibleHours.restOfDays[open];
+    const restClosed = this.state.possibleHours.restOfDays[close];
+    const satOpen = this.state.possibleHours.saturday[open];
+    const satClosed = this.state.possibleHours.saturday[close];
     if (sunOpen === 0 && sunClosed === 0) {
       this.setState({
         sunday: 'closed',
