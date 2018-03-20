@@ -2,6 +2,7 @@ const faker = require('faker');
 const fs = require('fs');
 const randomData = require('../data/randomData.js');
 
+
 const types = [
   'American',
   'Italian',

@@ -8,8 +8,7 @@
     "start": "node server/server.js",
     "dev-react": "webpack -d --watch",
     "build-data": "time node generatorFunctions/jsonScript.js",
-    "seedDB": "mongoimport --db localhost --collection information --file seedData.js"
-
+    "seedDB": "mongoimport --db sidebar --collection information --file seedData.js --numInsertionWorkers 4"
   },
   "author": "",
   "license": "ISC",
