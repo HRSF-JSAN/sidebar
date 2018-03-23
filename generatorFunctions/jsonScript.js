@@ -14,7 +14,7 @@ const writeData = (start) => {
   let i = start;
 
   while (i < 10000000 && drain) {
-    drain = writeStream.write(`{id: ${i}, title: "${faker.random.word()}", foodType: "${faker.random.objectElement(types)}", rating: ${faker.random.arrayElement([1, 2, 3, 4, 5])}, price: "${faker.random.arrayElement(['$', '$$', '$$$', '$$$$'])}", possibleHours: { sunday: [10, 6], restOfDays: [10, 10], saturday: [10, 11]}, minimumDelivery: "${faker.random.arrayElement(randomData.mins)}", text: "${faker.random.arrayElement(randomData.descriptions)}", location: { lat: 39.7701723, lng: -93.6739507 }}\n`);
+    drain = writeStream.write(`{id: ${i}, title: "${faker.random.word()}", foodType: "${faker.random.objectElement(types)}", rating: ${faker.random.arrayElement([1, 2, 3, 4, 5])}, priceRange: ${faker.random.arrayElement([1, 2, 3, 4, 5])}, price: "${faker.random.arrayElement(['$', '$$', '$$$', '$$$$'])}", possibleHours: { sunday: [10, 6], restOfDays: [10, 10], saturday: [10, 11]}, minimumDelivery: "${faker.random.arrayElement(randomData.mins)}", text: "${faker.random.arrayElement(randomData.descriptions)}", location: { lat: 39.7701723, lng: -93.6739507 }}\n`);
     i += 1;
   }
 

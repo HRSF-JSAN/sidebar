@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-mongoose.connect('mongodb://localhost/localhost');
+mongoose.connect('mongodb://localhost/sidebar');
 
 const informationSchema = mongoose.Schema({
   id: {
