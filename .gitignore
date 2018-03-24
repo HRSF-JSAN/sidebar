@@ -22,3 +22,7 @@ client/dist/bundle.js.map
 
 # Seed Data #
 seedData.js
+
+# New Relic #
+newrelic.js
+newrelic_agent.log

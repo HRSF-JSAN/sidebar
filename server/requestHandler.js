@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { Information } = require('../generatorFunctions/informationModel.js');
+const { redisClient } = require('./redisClient');
 
 module.exports.htmlServe = (req, res) => {
   const htmlPath = path.join(__dirname, '../client/dist/index.html');
@@ -26,11 +27,25 @@ module.exports.bundleServe = (req, res) => {
 
 module.exports.restaurantServe = (req, res) => {
   const split = req.url.split('/');
-  const searchValue = split[2];
-  Information.findOne({ id: searchValue }, (err, restaurant) => {
+  const searchValue = Number(split[2]);
+  redisClient.get(searchValue, (err, reply) => {
     if (err) {
       throw err;
     }
-    res.end(JSON.stringify(restaurant));
+    if (reply === null) {
+      Information.findOne({ id: searchValue }, (error, restaurant) => {
+        if (error) {
+          res.statusCode = 500;
+          res.end();
+        } else {
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          redisClient.setex(`${searchValue}`, 3600, JSON.stringify(restaurant));
+          res.end(JSON.stringify(restaurant));
+        }
+      });
+    } else {
+      res.writeHead(200, { 'Content-Type': 'application/javascript' });
+      res.end(reply);
+    }
   });
 };
