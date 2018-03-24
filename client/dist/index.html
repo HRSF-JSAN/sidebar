@@ -9,9 +9,10 @@
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="bundle.js"></script>
-    <script> 
+    <script>
+    const itemID = Math.floor(Math.random(0, 10000000) * 10000000);
       ReactDOM.render(
-        React.createElement(Sidebar, { id: 101, location: window.navigator.geolocation }, null), document.getElementById('app')
+        React.createElement(Sidebar, { id: itemID, location: window.navigator.geolocation }, null), document.getElementById('app')
       );
     </script>
 

@@ -1,18 +1,30 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
-const router = require('./router.js');
-require('dotenv').config();
+require('newrelic');
+const http = require('http');
+const handler = require('./requestHandler');
 
-const port = process.env.PORT || 3400;
-
-const app = express();
-
-app.use(bodyParser.json());
-app.use('/', router);
-app.use(express.static(path.join(__dirname, '/../client/dist')));
-
-
-app.listen(port, () => console.log(`listening on ${port}`)); // eslint-disable-line no-console
-
-module.exports = app;
+http.createServer((req, res) => {
+  req.on('error', (err) => {
+    if (err) {
+      throw err;
+    }
+    res.statusCode = 400;
+    res.end();
+  });
+  res.on('error', (err) => {
+    if (err) {
+      throw err;
+    }
+  });
+  if (req.url === '/') {
+    handler.htmlServe(req, res);
+  } else if (req.url.match('.css')) {
+    handler.cssServe(req, res);
+  } else if (req.url.match('/bundle.js')) {
+    handler.bundleServe(req, res);
+  } else if (req.url.split('/')[1] === 'information') {
+    handler.restaurantServe(req, res);
+  } else {
+    res.StatusCode = 404;
+    res.end();
+  }
+}).listen(3400);

@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import Moment from 'react-moment';
 import moment from 'moment';
-import getInformation from '../requests.js';
 import TiWine from 'react-icons/lib/ti/wine';
 import TiStopWatch from 'react-icons/lib/ti/stopwatch';
 import TiEdit from 'react-icons/lib/ti/edit';
+import getInformation from '../requests';
 
 class Hours extends React.Component {
   constructor(props) {
@@ -53,22 +53,22 @@ class Hours extends React.Component {
     });
   }
   findPrice() {
-    if (this.state.priceRange.length === 1) {
+    if (this.state.priceRange === 1) {
       this.setState({
         price: '5-20',
       });
     }
-    if (this.state.priceRange.length === 2) {
+    if (this.state.priceRange === 2) {
       this.setState({
         price: '11-30',
       });
     }
-    if (this.state.priceRange.length === 3) {
+    if (this.state.priceRange === 3) {
       this.setState({
         price: '12-50',
       });
     }
-    if (this.state.priceRange.length === 4) {
+    if (this.state.priceRange >= 4) {
       this.setState({
         price: '15-100',
       });
