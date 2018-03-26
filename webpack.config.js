@@ -66,33 +66,3 @@ const server = {
 module.exports = [
   client, server,
 ];
-
-// const config = {
-//   entry: APP_DIR + '/index.jsx',
-//   output: {
-//     path: BUILD_DIR,
-//     filename: 'bundle.js',
-//   },
-//   module: {
-//     loaders: [
-//       {
-//         test: /\.jsx?/,
-//         include: APP_DIR,
-//         loader: 'babel-loader',
-//         query: {
-//           presets: ['env', 'react'],
-//         },
-//       },
-//       {
-//         test: /\.css$/,
-//         loader: 'style-loader!css-loader',
-//       },
-//       {
-//         test: /\.jpg$/,
-//         loader: ['file-loader'],
-//       },
-//     ],
-//   },
-// };
-
-// module.exports = config;
