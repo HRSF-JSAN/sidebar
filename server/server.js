@@ -19,7 +19,7 @@ http.createServer((req, res) => {
     handler.htmlServe(req, res);
   } else if (req.url.match('.css')) {
     handler.cssServe(req, res);
-  } else if (req.url.match('/bundle.js')) {
+  } else if (req.url.match(/\/(\w+-)?bundle.js/)) {
     handler.bundleServe(req, res);
   } else if (req.url.split('/')[1] === 'information') {
     handler.restaurantServe(req, res);

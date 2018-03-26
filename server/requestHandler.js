@@ -21,7 +21,7 @@ module.exports.cssServe = (req, res) => {
 module.exports.bundleServe = (req, res) => {
   const bundlePath = path.join(__dirname, '../client/dist', req.url);
   const bundleStream = fs.createReadStream(bundlePath, 'UTF-8');
-  res.writeHead(200, { 'Content-Type': 'application/javascript' });
+  res.writeHead(200, { 'Content-Type': 'text/javascript' });
   bundleStream.pipe(res);
 };
 

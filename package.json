@@ -43,7 +43,7 @@
     "redis": "^2.8.0",
     "request": "^2.75.0",
     "style-loader": "^0.20.2",
-    "webpack": "^1.13.2"
+    "webpack": "^3.10.0"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
