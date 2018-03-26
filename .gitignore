@@ -19,6 +19,7 @@ coverage
 # bundles #
 client/dist/bundle.js
 client/dist/bundle.js.map
+client/dist/server-bundle.js
 
 # Seed Data #
 seedData.js
