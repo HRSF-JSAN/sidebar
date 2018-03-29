@@ -1,0 +1,25 @@
+version: "2"
+services:
+  web:
+    image: mlbpro417/sidebar
+    # restart: always
+    ports:
+      - "3400:3400"
+    links:
+      - mongo
+      - redis
+    # depends on: 
+    #   - mongo
+    #   - redis
+    environment:
+      REDIS_HOST: redis
+      MONGO_URL: mongodb://mongo/sidebar    
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+  redis: 
+    image: redis:latest
+    ports:
+      - "6379:6379"     

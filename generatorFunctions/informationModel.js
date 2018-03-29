@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-mongoose.connect('mongodb://localhost/sidebar');
+mongoose.connect('mongodb://ec2-54-153-41-230.us-west-1.compute.amazonaws.com/sidebar');
 
 const informationSchema = mongoose.Schema({
   id: {

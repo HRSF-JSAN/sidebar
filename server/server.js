@@ -1,6 +1,9 @@
 require('newrelic');
 const http = require('http');
 const handler = require('./requestHandler');
+// const mongoose = require('mongoose');
+
+// mongoose.connect('mongodb://ec2-54-153-41-230.us-west-1.compute.amazonaws.com/sidebar');
 
 http.createServer((req, res) => {
   req.on('error', (err) => {
